@@ -1,0 +1,39 @@
+.navbar{
+  display: flex;
+  height: 5%;
+  background-color:  #ffe600;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0 10%;
+}
+
+.navbar-logo{
+  width: 55px;
+  height: 48px;
+}
+
+.navbar-input{
+  position: relative;
+  width: 90%;
+  height: 50%;
+  border: none;
+  border-radius: 5px;
+}
+
+.navbar-input:focus{
+  outline: nones;
+}
+
+.navbar-search{
+  position: absolute;
+  background-color: #FFF;
+  border:none;
+  right: 11%;
+  top: 15px;
+}
+
+.navbar-search::before{
+  content: url('../../assets/search.png');
+  width: 20px;
+  height: 20px;
+}

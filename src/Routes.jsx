@@ -1,7 +1,7 @@
 import { BrowserRouter, RouterProvider, createBrowserRouter, useRoutes } from 'react-router-dom'
-import { Home } from './pages/home/Home'
-import { SearchResult } from './pages/searchResult/SearchResult'
-import { Product } from './pages/product/Product'
+import { Home } from './pages/Home'
+import { SearchResult } from './pages/SearchResult'
+import { Product } from './pages/Product'
 
 const Routes = () => {
   const routes = useRoutes([
