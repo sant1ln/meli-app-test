@@ -14,7 +14,7 @@ const Routes = () => {
       element: <SearchResult />
     },
     {
-      path: '/product?:id',
+      path: '/product/:id',
       element: <Product />
     }
   ])
