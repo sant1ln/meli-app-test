@@ -1,6 +1,15 @@
+import { useLocation } from 'react-router-dom'
 import './styles/searchResult.css'
 
 export const SearchResult = () => {
+
+  const location = useLocation();
+  const queryParams = new URLSearchParams(location.search);
+  const searchParam = queryParams.get('search');
+  console.log(searchParam)
+
+
+
   return (
     <section className="result-container">
       <article className="result-product">

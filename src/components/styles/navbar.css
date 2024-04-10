@@ -8,9 +8,14 @@
   margin-bottom: 2%;
 }
 
+.navbar-link{
+  display: grid;
+  place-items: center;
+}
+
 .navbar-logo{
   width: 55px;
-  height: 48px;
+  height: 40px;
 }
 
 .navbar-input{

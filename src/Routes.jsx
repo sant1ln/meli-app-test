@@ -10,7 +10,7 @@ const Routes = () => {
       element: <Home />
     },
     {
-      path: '/search/:id',
+      path: '/items',
       element: <SearchResult />
     },
     {
@@ -25,8 +25,6 @@ const Routes = () => {
 
 export const AppRouter = () =>{
   return (
-    <BrowserRouter>
       <Routes />
-    </BrowserRouter>
   )  
 }
