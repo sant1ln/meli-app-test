@@ -1,0 +1,35 @@
+
+.result-product{
+  margin-bottom: 2px;
+  background-color: #fff;  
+  display: grid;
+  grid-template-columns: 15% 70% 15%;
+  height: 180px;
+}
+
+.result-product-img{
+  display: grid;
+  place-items: center;
+}
+
+.result-product-img img{
+  width: 90%;
+}
+
+.result-product-data{
+  padding: 10px 5px;
+}
+
+.result-product-data h3{
+  margin: 0;
+  font-weight: 500;
+}
+
+.result-product-data p{
+  margin: 0;
+}
+
+.result-product-location{
+  padding-top: 10%;
+  color: rgba(0, 0, 0, .55)
+}

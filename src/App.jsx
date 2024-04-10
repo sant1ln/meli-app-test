@@ -8,8 +8,10 @@ function App() {
   return (
     <main>
         <MainProvider>
-          <Navbar />       
-          <AppRouter />
+          <Navbar /> 
+          <div className='main-content'>
+            <AppRouter />
+          </div>    
         </MainProvider>
     </main>
   )

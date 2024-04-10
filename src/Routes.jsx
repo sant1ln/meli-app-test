@@ -10,7 +10,7 @@ const Routes = () => {
       element: <Home />
     },
     {
-      path: '/search?:id',
+      path: '/search/:id',
       element: <SearchResult />
     },
     {
