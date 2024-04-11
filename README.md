@@ -1,8 +1,10 @@
-# React + Vite
+# Prueba tecnica mercado libre - Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Para ejecutar prueba:
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Descarga el proyecto
+- Instala las dependencias
+- Ejecuta <code>npm run dev </code>
+- Instala las dependencias y ejecuta la API
+creada para este mismo proyecto.
+<a href="https://github.com/sant1ln/meli-api-test " about="blank">Ir a la API</a>
