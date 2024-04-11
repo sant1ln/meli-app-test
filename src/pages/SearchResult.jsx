@@ -1,41 +1,61 @@
-import { useLocation } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 import './styles/searchResult.css'
+import { useEffect, useState } from 'react';
+import { BreadCrumb } from '../components/BreadCrumb';
 
 export const SearchResult = () => {
 
   const location = useLocation();
   const queryParams = new URLSearchParams(location.search);
   const searchParam = queryParams.get('search');
-  console.log(searchParam)
+  
+  const [result, setResult] = useState([])
+  const [categories, setCategories] = useState([])
 
+  useEffect(()=>{
+    fetch(`http://localhost:3030/api/v1/items?q=${searchParam}`)
+      .then((response)=> response.json())
+      .then((data)=>{ 
+        setCategories(data.categories)
+        setResult(data.items)
+      })
+  },[searchParam])
 
+  const printSimbol = (index) => {
+    if(index < categories.length - 1){
+      return ' >'
+    }
+  }
+
+  if(result.length === 0){
+    return <h1>Loading</h1>
+  }
 
   return (
     <section className="result-container">
-      <article className="result-product">
-        <div className='result-product-img'>
-          <img src="https://http2.mlstatic.com/D_620616-MLA49003338062_022022-I.jpg" alt="result" />
-        </div>
-        <div className='result-product-data'>
-          <h3>$1.500</h3>
-          <p>Apple Ipod touch 5g 16gb negro igual a nuevo completo unico! </p>
-        </div>
-        <div className='result-product-location'>
-          <span>Medellin</span>
-        </div>
-      </article>  
-      <article className="result-product">
-        <div className='result-product-img'>
-          <img src="https://http2.mlstatic.com/D_620616-MLA49003338062_022022-I.jpg" alt="result" />
-        </div>
-        <div className='result-product-data'>
-          <h3>$1.500</h3>
-          <p>Apple Ipod touch 5g 16gb negro igual a nuevo completo unico! </p>
-        </div>
-        <div className='result-product-location'>
-          <span>Medellin</span>
-        </div>
-      </article>  
+      {
+        categories.map((value, index)=>(
+          <span key={value.id}>
+            <BreadCrumb  value={value.name} />
+            {printSimbol(index)}
+          </span>
+        ))
+      }
+      {        
+        result.map((value)=>(
+        <Link to={`/item/${value.id}`} key={value.id}>
+          <article className="result-product">
+            <div className='result-product-img'>
+              <img src={value.picture} alt={value.title} />
+            </div>
+            <div className='result-product-data'>
+              <h3>{value.price.amount}.{value.price.decimals}</h3>
+              <p>{value.title}</p>
+            </div>
+          </article>  
+        </Link>
+        ))
+      }
     </section>
   )
 }
