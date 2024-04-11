@@ -1,19 +1,16 @@
-import { types } from "../../../types/types"
-
+import { types } from "../../types/types"
 
 export const initialMainState = {}
 
 export const MainReducer = (state = initialCardState, action) => {
-  switch (action) {
-    case types.setAllCards:
+  switch (action.type) {
+    case types.setCategories:
+      console.log(action)
       return {
         ...state,
-        cards: action.payload
+        categories: action.payload
       }
-    case types.selectCard:
-      return {
-        ...state,
-        selectedCard: action.payload
-      }
+    default:
+      return state;
   }
 }
