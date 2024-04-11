@@ -1,9 +1,9 @@
-.home{
+.error{
   display: flex;
   place-content: center;
 }
 
-.home-message{
+.error-message{
   display: flex;
   justify-content: center;
   flex-direction: column;

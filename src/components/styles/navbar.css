@@ -18,27 +18,29 @@
   height: 40px;
 }
 
-.navbar-input{
-  position: relative;
+.navbar-searchbar{  
   width: 90%;
   height: 50%;
+  display: flex;
+}
+
+.navbar-input{
+  width: 95%;
   border: none;
-  border-radius: 5px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
 }
 
 .navbar-input:focus{
-  outline: nones;
+  outline: none;
 }
 
 .navbar-search{
-  position: absolute;
   background-color: #FFF;
   border:none;
-  right: 11%;
-  top: 15px;
 }
 
-.navbar-search::before{
+.navbar-search::after{
   content: url('../../assets/search.png');
   width: 20px;
   height: 20px;

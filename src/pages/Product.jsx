@@ -33,10 +33,10 @@ export const Product = () => {
   return (
     <>
     {
-     product?.categories?.map((value, index)=>(
+     product?.categories?.map((value, index,array)=>(
         <span key={value.id}>
           <BreadCrumb  value={value.name} />
-          {printSimbol(index, product.categories)}
+          {printSimbol(index, array)}
         </span>
       ))
     }
