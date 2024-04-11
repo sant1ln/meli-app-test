@@ -1,9 +1,9 @@
 import { Link, useLocation } from 'react-router-dom'
-import './styles/searchResult.css'
 import { useEffect, useState } from 'react';
 import { BreadCrumb } from '../components/BreadCrumb';
 import { Loader } from '../components/Loader';
 import { printSimbol } from '../utils/utils';
+import './styles/searchResult.scss'
 
 export const SearchResult = () => {
 

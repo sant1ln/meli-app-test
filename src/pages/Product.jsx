@@ -1,9 +1,9 @@
 import { useParams} from 'react-router-dom'
-import './styles/product.css';
 import { useEffect, useState } from 'react';
 import { formatValueToCurrency, printSimbol } from '../utils/utils';
 import { BreadCrumb } from '../components/BreadCrumb';
 import { Loader } from '../components/Loader';
+import './styles/product.scss';
 
 export const Product = () => {
 

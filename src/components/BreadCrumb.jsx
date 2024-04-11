@@ -1,5 +1,5 @@
 import React from 'react'
-import './styles/breadcrumb.css'
+import './styles/breadcrumb.scss'
 
 export const BreadCrumb = ({value}) => {
   return (

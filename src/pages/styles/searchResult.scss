@@ -1,0 +1,42 @@
+
+a{
+  text-decoration: none;
+}
+
+.result-product{
+  text-decoration: none;
+  color: #000;
+  margin-bottom: 2px;
+  background-color: #fff;  
+  display: grid;
+  grid-template-columns: 15% 70% 15%;
+  height: 180px;
+  cursor: pointer;
+
+  &-img{
+    display: grid;
+    place-items: center;
+  }
+
+  &-img img{
+    width: 90%;
+  }
+
+  &-data{
+    padding: 10px 5px;
+  }
+
+  &-data h3{
+    margin: 0;
+    font-weight: 500;
+  }
+
+  &-data p{
+    margin: 0;
+  }
+
+  &-location{
+    padding-top: 10%;
+    color: rgba(0, 0, 0, .55)
+  }
+}

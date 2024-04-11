@@ -1,0 +1,14 @@
+.home{
+  display: flex;
+  place-content: center;
+
+  &-message{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    color: rgba(0,0,0,.5);
+    font-size: 20px;
+  }
+}
+
+

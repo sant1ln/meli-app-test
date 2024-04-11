@@ -2,7 +2,7 @@ import React from 'react';
 import ml_logo from '../assets/ml_logo.png';
 import {Link, useNavigate} from 'react-router-dom';
 import searchIcon from '../assets/search.png';
-import './styles/navbar.css'
+import './styles/navbar.scss'
 
 export const Navbar = () => {
 
